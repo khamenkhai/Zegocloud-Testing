@@ -25,9 +25,9 @@ class _SecondScreenState extends State<SecondScreen> {
             events: ZegoUIKitPrebuiltCallEvents(),
 
             appID:
-                2294897, // Fill in the appID that you get from ZEGOCLOUD Admin Console.
+                000, // Fill in the appID that you get from ZEGOCLOUD Admin Console.
             appSign:
-                "ede4f0ddedc5baeddec523de332fb01ccc0fd3555a5ea94bba110154fe01653c", // Fill in the appSign that you get from ZEGOCLOUD Admin Console.
+                "you app sign kehy", // Fill in the appSign that you get from ZEGOCLOUD Admin Console.
             userID: ramdomName.toString(),
             userName: "User name : ${ramdomName}",
             callID: "${widget.text}",
