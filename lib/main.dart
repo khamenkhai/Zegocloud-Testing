@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zego_cloud_testin/call_testing/call_home.dart';
-import 'package:zego_cloud_testin/chat/login.dart';
-import 'package:zego_cloud_testin/socket_testing.dart';
+import 'package:zego_cloud_testin/zego_chat/login.dart';
+import 'package:zego_cloud_testin/socket_testing/socket_testing.dart';
 import 'package:zego_zimkit/zego_zimkit.dart';
 
 void main() async {
@@ -39,6 +39,7 @@ class _FirstScreenState extends State<FirstScreen> {
       // ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           ElevatedButton(
             onPressed: () {

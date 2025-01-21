@@ -2,7 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:zego_cloud_testin/chat/chat_screen.dart';
+import 'package:zego_cloud_testin/zego_chat/chat_screen.dart';
 import 'package:zego_zimkit/zego_zimkit.dart';
 
 class LoginPage extends StatefulWidget {
