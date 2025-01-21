@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "87674806781",
+    "firebase_url": "https://socialmediaproject-a11c2-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "socialmediaproject-a11c2",
+    "storage_bucket": "socialmediaproject-a11c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87674806781:android:dfc13e969b1f9e8346b994",
+        "android_client_info": {
+          "package_name": "com.example.sm_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-ArrBiM9R2E8uqgRyrgY71Zg_CVtQ_O0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87674806781:android:5df66c8620fcb47e46b994",
+        "android_client_info": {
+          "package_name": "com.example.vc_testing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-ArrBiM9R2E8uqgRyrgY71Zg_CVtQ_O0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87674806781:android:0fc36abda9eca14d46b994",
+        "android_client_info": {
+          "package_name": "com.example.zego_cloud_testin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-ArrBiM9R2E8uqgRyrgY71Zg_CVtQ_O0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

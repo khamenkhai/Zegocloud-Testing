@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:zego_cloud_testin/call_screen.dart';
+import 'package:zego_cloud_testin/call_testing/call_home.dart';
+import 'package:zego_cloud_testin/chat/login.dart';
+import 'package:zego_cloud_testin/socket_testing.dart';
+import 'package:zego_zimkit/zego_zimkit.dart';
 
-void main() {
+void main() async {
+  await WidgetsFlutterBinding.ensureInitialized();
+  // Initialize ZegoCloud SDK with your appID and appSign
+  await ZIMKit().init(
+    appID: 2052350934, // your appid
+    appSign:
+        '8a8e27e50440a4e28f5e268b2f8289f5ef5cc6f08edbc99712b3f2b03d3c1c83', // your appSign
+  );
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-  
     return MaterialApp(
       home: FirstScreen(),
     );
@@ -22,64 +31,50 @@ class FirstScreen extends StatefulWidget {
 }
 
 class _FirstScreenState extends State<FirstScreen> {
-  TextEditingController _controller = TextEditingController();
-
-  // Function to navigate to second screen with input text
-  void _submitText() {
-    String userInput = _controller.text;
-    if (userInput.isNotEmpty) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => SecondScreen(text: userInput),
-        ),
-      );
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Input and Submit Example'),
-        backgroundColor: Colors.teal,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              'Enter your text below:',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 20),
-            TextField(
-              controller: _controller,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'TYPE CALL ID',
-                filled: true,
-                fillColor: Colors.grey[200],
-              ),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _submitText,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.teal, // Button color
-                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 12),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+      // appBar: CupertinoNavigationBar(
+      //   middle: Text('ZegoCloud Testing'),
+      // ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LoginPage(),
                 ),
-              ),
-              child: Text('Submit'),
-            ),
-          ],
-        ),
+              );
+            },
+            child: Text("Chat Testing"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => WebSocketTesting(),
+                ),
+              );
+            },
+            child: Text("socket testing"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CallHome(),
+                ),
+              );
+            },
+            child: Text("call testing"),
+          ),
+        ],
       ),
     );
   }
 }
-
